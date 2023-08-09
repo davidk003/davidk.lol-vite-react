@@ -1,0 +1,21 @@
+:root {
+  font-family: "Inter", sans-serif;
+
+  text-rendering: optimizeLegibility;
+  font-synthesis: weight style small-caps;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* text size adjust either 100% or none */
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
