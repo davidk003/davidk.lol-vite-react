@@ -1,8 +1,8 @@
 import React from "react";
-import "./Navbar.css"
+import "./Top_Navbar.css"
 import { Link } from "react-router-dom";
 
-export default function Navbar(): React.ReactElement {
+export default function Top_Navbar(): React.ReactElement {
   return (
     <nav className="navbar">
       <a className="site-title" href="/">David's website</a>
