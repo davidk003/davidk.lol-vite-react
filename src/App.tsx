@@ -1,5 +1,5 @@
 import "./App.css";
-import Top_Navbar from "./Top_Navbar";
+import TopNavbar from "./components/TopNavbar";
 import { Route, Routes } from "react-router-dom";
 import Contacts from "./pages/Contacts";
 import About from "./pages/About";
@@ -9,7 +9,7 @@ import Login from "./pages/Login";
 function App() {
   return (
     <>
-      <Top_Navbar />
+      <TopNavbar />
       <div className="container">
         <Routes>
           <Route path="/" ></Route>
