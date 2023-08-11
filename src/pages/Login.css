@@ -1,0 +1,29 @@
+input{
+    display: block;
+    background-color: rgb(183, 226, 226);
+    border-style: groove;
+    border-width: 1px;
+    padding: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+input:focus
+{
+    background-color: rgb(183, 226, 197);
+}
+
+button
+{
+    text-align: center;
+    display: block;
+    border-radius: 4px;
+    padding: 6px 12px;
+    margin-top: 1rem;
+}
+
+
+#login-form
+{
+    display: block;
+    margin: 1rem;
+}
