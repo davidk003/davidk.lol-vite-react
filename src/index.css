@@ -18,4 +18,22 @@
 
 body {
   margin: 0;
+  background-color: #D6E5E3;
+}
+
+.page-header
+{
+  margin: 1rem;
+}
+
+.page-header::before
+{
+  content: "";
+
+  height: 1em;
+  width: 0.25em;
+  display: inline-block;
+  vertical-align: -15%;
+  background: #508484;
+  margin-left: -1rem;
 }
