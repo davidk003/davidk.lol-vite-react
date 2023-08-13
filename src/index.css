@@ -21,21 +21,3 @@ body {
   background-color: #D6E5E3;
 }
 
-.page-header
-{
-  font-size:2rem;
-  margin: 1rem;
-  margin-right: 0rem;
-}
-
-.page-header::before
-{
-  content: "";
-
-  height: 1em;
-  width: 0.25em;
-  display: inline-block;
-  vertical-align: -15%;
-  background: #508484;
-  margin-left: -1rem;
-}

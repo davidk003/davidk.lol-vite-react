@@ -1,0 +1,34 @@
+.emoticon-header-wrapper
+{
+    display: flex;
+}
+
+
+.emoticon-header
+{
+  font-size:2rem;
+  margin: 1rem;
+  margin-right: 0rem;
+}
+
+.emoticon-header::before
+{
+  content: "";
+
+  height: 1em;
+  width: 0.25em;
+  display: inline-block;
+  vertical-align: -10%;
+  background: #508484;
+  margin: 0rem;
+  margin-left: -1rem;
+  margin-right: 0.5rem;
+}
+
+.header-emoticon
+{
+  margin:1rem;
+  font-size: 2rem;
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
