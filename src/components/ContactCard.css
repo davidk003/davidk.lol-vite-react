@@ -1,0 +1,14 @@
+.contact-card
+{
+    border-radius: 10px;
+    border: 5px;
+    border-color: #687078;
+    border-style: ridge;
+    display:flex;
+    flex-direction: column;
+}
+
+.contact-card .contact-desc:hover
+{
+    color: #508484;
+}
