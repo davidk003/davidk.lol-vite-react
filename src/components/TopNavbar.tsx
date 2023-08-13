@@ -14,7 +14,7 @@ export default function Top_Navbar(): React.ReactElement {
         <NavLink to="/aboutme"> About Me </NavLink>
         </li>
         <li>
-        <NavLink to="/experimental"> Experimental </NavLink>
+        <NavLink to="/fun"> Fun </NavLink>
         </li>
         <li>
           <NavLink to="/login"> Login</NavLink>
