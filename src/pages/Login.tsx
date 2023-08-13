@@ -1,8 +1,10 @@
 import "./Login.css";
+import EmoticonHeader from "../components/EmoticonHeader";
+
 export default function Login() {
   return (
-    <>
-      <h1 className="page-header">Dev Login 🔐</h1>
+    <div className="login-page-container">
+      <EmoticonHeader content="Dev Login" emoticon="🔐"></EmoticonHeader>
       <form id="login-form">
         <div className="input-field">
           <label htmlFor="login-username">Username:</label>
@@ -12,6 +14,6 @@ export default function Login() {
         </div>
         <button id="submit-login">Login</button>
       </form>
-    </>
+    </div>
   );
 }

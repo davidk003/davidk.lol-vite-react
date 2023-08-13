@@ -1,16 +1,4 @@
-.header-wrapper
-{
-    display: flex;
-}
-.header-emoticon
-{
-    margin:1rem;
-    font-size: 2rem;
-    margin-left: 0.5rem;
-    margin-top: 0.5rem;
-}
-
-.header-emoticon:hover
+.about-page-container .header-emoticon:hover
 {
     animation: hand-wave 1.5s;
     animation-iteration-count: infinite;

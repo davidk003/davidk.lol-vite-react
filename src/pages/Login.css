@@ -12,7 +12,7 @@ input:focus
     background-color: rgb(183, 226, 197);
 }
 
-button
+.login-page-container button
 {
     text-align: center;
     display: block;
@@ -21,9 +21,41 @@ button
     margin-top: 1rem;
 }
 
+.login-page-container button:hover
+{
+    background-color: white;
+}
 
-#login-form
+.login-page-container #login-form
 {
     display: block;
     margin: 1rem;
+    margin-top: 0rem;
 }
+
+.login-page-container .header-emoticon:hover
+{
+    animation: locked-animation 500ms;
+    animation-iteration-count: 1;
+}
+
+@keyframes locked-animation {
+    0%  {transform: translate(-0.2rem);}
+    8% {transform: translate(0.2rem);}
+    16% {transform: translate(-0.2rem);}
+    24% {transform: translate(0.2rem);}
+    32% {transform: translate(-0.2rem);}
+    40%  {transform: translate(0.1rem);}
+    48% {transform: translate(-0.1rem);}
+    56% {transform: translate(0.1rem);}
+    64% {transform: translate(-0.1rem);}
+    72% {transform: translate(0.1rem);}
+    80%  {transform: translate(-0.05rem);}
+    88% {transform: translate(0.05rem);}
+    96% {transform: translate(-0.05rem);}
+    100% {transform: translate(0.05rem);}
+
+    
+}
+
+

@@ -3,3 +3,27 @@
     display: flex;
     flex-direction: column;
 }
+
+.contacts-page-container .header-emoticon:hover
+{
+    animation: phone-animation 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes phone-animation {
+    0%  {transform: rotate(7deg);}
+    5% {transform: rotate(-7deg);}
+    10% {transform: rotate(7deg);}
+    15% {transform: rotate(-7deg);}
+    20% {transform: rotate(7deg);}
+    30% {transform: none;}
+    35%  {transform: rotate(7deg);}
+    40% {transform: rotate(-7deg);}
+    45% {transform: rotate(7deg);}
+    50% {transform: rotate(-7deg);}
+    55% {transform: rotate(2deg);}
+    100% {transform: none;}
+    
+}
+
+

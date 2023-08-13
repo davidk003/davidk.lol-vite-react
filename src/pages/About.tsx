@@ -1,5 +1,6 @@
 import React from "react";
 import SectionText from "../components/SectionText";
+import EmoticonHeader from "../components/EmoticonHeader";
 import "./About.css";
 
 const about_string: string =
@@ -7,11 +8,12 @@ const about_string: string =
 
 export default function About(): React.ReactElement {
   return (
-    <div className="about-page">
-      <div className="header-wrapper">
+    <div className="about-page-container">
+      <EmoticonHeader content="About Me" emoticon="👋"></EmoticonHeader>
+      {/* <div className="header-wrapper">
         <h1 className="page-header"> About Me</h1>
         <div className="header-emoticon">👋</div>
-      </div>
+      </div> */}
       <img src="profile.jpg"></img>
       <SectionText header="example" content={about_string}></SectionText>
     </div>
