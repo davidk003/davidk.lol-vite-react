@@ -23,7 +23,9 @@ body {
 
 .page-header
 {
+  font-size:2rem;
   margin: 1rem;
+  margin-right: 0rem;
 }
 
 .page-header::before

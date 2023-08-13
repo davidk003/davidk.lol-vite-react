@@ -3,7 +3,7 @@ import TopNavbar from "./components/TopNavbar";
 import { Route, Routes } from "react-router-dom";
 import Contacts from "./pages/Contacts";
 import About from "./pages/About";
-import Experimental from "./pages/Experimental";
+import Experimental from "./pages/Fun";
 import Login from "./pages/Login";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
           <Route path="/" ></Route>
           <Route path="/contacts" element={<Contacts></Contacts>}></Route>
           <Route path="/aboutme" element={<About></About>}></Route>
-          <Route path="/experimental" element={<Experimental></Experimental>}></Route>
+          <Route path="/fun" element={<Experimental></Experimental>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
         </Routes>
       </div>
