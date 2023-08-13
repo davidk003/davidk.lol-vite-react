@@ -1,6 +1,15 @@
-import "./SectionText.css"
+import "./SectionText.css";
 
-function SectionText(header: string, content: string, ): React.ReactElement
-{
-  return <div className="section-text"></div>
+interface SectionTextProp {
+  header: string;
+  content: string;
+}
+
+export default function SectionText(prop: SectionTextProp): React.ReactElement {
+  return (
+    <div className="section-text">
+      <h3> {prop.header}</h3>
+      <p>{prop.content}</p>
+    </div>
+  );
 }
