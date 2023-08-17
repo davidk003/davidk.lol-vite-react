@@ -1,0 +1,9 @@
+.header-emoticon:hover {
+  animation: project-animation 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes project-animation
+{
+
+}

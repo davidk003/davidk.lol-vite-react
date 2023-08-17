@@ -1,0 +1,22 @@
+.fun-page-container .header-emoticon:hover {
+  animation: fun-animation 800ms;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fun-animation {
+  10% {
+    transform: rotate(5deg);
+  }
+  20% {
+    transform: rotate(5deg);
+  }
+  30% {
+    transform: rotate(5deg);
+  }
+  40% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
+}
