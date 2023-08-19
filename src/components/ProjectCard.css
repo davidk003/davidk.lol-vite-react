@@ -1,0 +1,41 @@
+.project-card
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: solid 1px;
+    border-radius: 10px;
+    overflow-wrap:break-word;
+    width: 20rem;
+    height: auto;
+    background-color: var(--project-card-background-color);
+    border-color: var(--project-card-border-color);
+}
+
+.project-card a
+{
+    color:inherit;
+    text-decoration: none;
+}
+
+.project-card h1
+{
+    margin-left: 1rem;
+    margin-bottom: 0;
+    color:inherit;
+    text-decoration: none;
+}
+
+.project-card p
+{
+    min-width: 0; 
+    color:inherit;
+    margin-top: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.project-card:hover
+{
+    background-color: var(--project-card-background-hover-color);
+}

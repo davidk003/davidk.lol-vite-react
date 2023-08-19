@@ -3,7 +3,24 @@
   animation-iteration-count: infinite;
 }
 
-@keyframes project-animation
-{
-
+@keyframes project-animation {
+  0%, 100% {
+    transform: none;
+  }
+  25% {
+    transform: rotate(35deg) translate(1rem);
+  }
+  50%, 75%{
+    transform: rotate(-35deg) translate(-1rem);
+  }
 }
+
+.project-card-container
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  
+}
+
