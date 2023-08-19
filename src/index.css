@@ -10,6 +10,32 @@
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+
+  /* CONSTANTS */
+  --body-background-color: #E9F1FA;
+  /* Top Navbar */
+  --navbar-color: #aad0fb;
+  --navbar-text-color: #1e375a;
+  --navbar-hover-color: #c9e1fd;
+  --navbar-active-tab-color: #9bc0ec;
+  /* Emoticon Header */
+  --emoticon-header-text-color: #1e375a;
+  --emoticon-header-font: inherit;
+  --emoticon-header-deco-color: #1e375a;
+  /* Contact Card */
+  --contact-info-hover-color: #1e375a;
+  --border-color: #687078;
+  /* Login form */
+  --input-field-hover-color: #9bc0ec;
+  --input-field-background-color:#E9F1FA;
+  --login-button-color: antiquewhite;
+  --login-button-hover-color: white;
+  --login-button-padding: 6px 12px;
+  /* Projects */
+  /* Project cards */
+  --project-card-background-color: #9bc0ec;
+  --project-card-background-hover-color: #bccee6;
+  --project-card-border-color: white;
 }
 
 * {
@@ -18,6 +44,5 @@
 
 body {
   margin: 0;
-  background-color: #D6E5E3;
+  background-color: var(--body-background-color);
 }
-

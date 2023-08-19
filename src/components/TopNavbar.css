@@ -1,6 +1,6 @@
 .navbar {
-  background-color: #687078;
-  color: #D6E5E3;
+  background-color: var(--navbar-color);
+  color: var(--navbar-text-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,12 +28,12 @@
 
 .navbar li a.active
 {
-  background-color: rgb(50, 50, 50);
+  background-color:var(--navbar-active-tab-color);
 }
 
 .navbar li:hover
 {
-  background-color:#878F97;
+  background-color:var(--navbar-hover-color);
 }
 
 .navbar .site-title

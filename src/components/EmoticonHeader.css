@@ -6,6 +6,8 @@
 
 .emoticon-header
 {
+  color: var(--emoticon-header-text-color);
+  font-family:var(--emoticon-header-font);
   font-size:2rem;
   margin: 1rem;
   margin-right: 0rem;
@@ -19,7 +21,7 @@
   width: 0.25em;
   display: inline-block;
   vertical-align: -10%;
-  background: #508484;
+  background: var(--emoticon-header-deco-color);
   margin: 0rem;
   margin-left: -1rem;
   margin-right: 0.5rem;

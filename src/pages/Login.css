@@ -1,6 +1,6 @@
 input{
     display: block;
-    background-color: rgb(183, 226, 226);
+    background-color: var(--input-field-background-color);
     border-style: groove;
     border-width: 1px;
     padding: 0.25rem;
@@ -9,21 +9,22 @@ input{
 
 input:focus
 {
-    background-color: rgb(183, 226, 197);
+    background-color: var(--input-field-hover-color);
 }
 
 .login-page-container button
 {
+    background-color: var(login-button-color);
     text-align: center;
     display: block;
     border-radius: 4px;
-    padding: 6px 12px;
+    padding:var(--login-button-padding);
     margin-top: 1rem;
 }
 
 .login-page-container button:hover
 {
-    background-color: white;
+    background-color: var(--login-button-hover-color);
 }
 
 .login-page-container #login-form
