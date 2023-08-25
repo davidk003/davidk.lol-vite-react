@@ -29,3 +29,10 @@ If you are developing a production application, we recommend updating the config
 Color palette:
 Light blue (#E9F1FA), bright blue (#00ABE4), white (#FFFFFF), regal blue (#1e375a), dark bright blue (#2373ff)
 inspiration: https://www.drone.io/
+
+Stack ideas? (in progress)
+Frontend: React
+Backend: Django
+DB: PostgreSQL
+Build tool: vite
+langs: Typescript/Python
