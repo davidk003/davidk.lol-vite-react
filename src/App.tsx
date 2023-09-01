@@ -1,10 +1,11 @@
 import "./App.css";
+import { supabase } from './supabaseClient';
 import TopNavbar from "./components/TopNavbar";
 import { Route, Routes } from "react-router-dom";
 import Contacts from "./pages/Contacts";
 import About from "./pages/About";
 import Experimental from "./pages/Fun";
-import Login from "./pages/Login";
+import Login from "./pages/Login"; 
 import Projects from "./pages/Projects";
 
 function App() {

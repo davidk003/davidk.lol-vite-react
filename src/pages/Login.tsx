@@ -1,18 +1,48 @@
 import "./Login.css";
 import EmoticonHeader from "../components/EmoticonHeader";
+import { supabase } from "../supabaseClient";
+import { useState } from "react";
 
 export default function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false)
+
+
+  const signInWithEmail = async (e: Event)=> {
+    e.preventDefault()
+    setLoading(true);
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email: email,
+      password: password,
+    });
+    if (error) {
+      alert("ERROR LOGGING IN\nError message:\n" + error.message);
+    }
+    else{
+      alert("Login success");
+    }
+    setLoading(false);
+  }
+  
+
   return (
     <div className="login-page-container">
-      <EmoticonHeader content="Dev Login" emoticon="🔐"></EmoticonHeader>
-      <form id="login-form">
+      <EmoticonHeader content="Login" emoticon="🔐"></EmoticonHeader>
+      <form id="login-form" onSubmit={signInWithEmail}>
         <div className="input-field">
-          <label htmlFor="login-username">Username:</label>
-          <input type="text" id="login-username"></input>
+          <label htmlFor="login-username">Email:</label>
+          <input type="text" id="login-username" required={true} value={email} onChange={(e) => setEmail(e.target.value)}></input>
           <label htmlFor="login-password">Password:</label>
-          <input type="text" id="login-password"></input>
+          <input
+            type="password"
+            id="login-password"
+            required={true}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          ></input>
         </div>
-        <button id="submit-login">Login</button>
+        <button id="submit-login">{ loading ? "Logging in...." : "Login"} </button>
       </form>
     </div>
   );
