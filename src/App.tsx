@@ -1,5 +1,4 @@
 import "./App.css";
-import { supabase } from './supabaseClient';
 import TopNavbar from "./components/TopNavbar";
 import { Route, Routes } from "react-router-dom";
 import Contacts from "./pages/Contacts";
