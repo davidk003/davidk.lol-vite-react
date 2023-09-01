@@ -29,7 +29,7 @@ export default function Login() {
   return (
     <div className="login-page-container">
       <EmoticonHeader content="Login" emoticon="🔐"></EmoticonHeader>
-      <form id="login-form" onSubmit={signInWithEmail}>
+      <form id="login-form" onSubmit={(e) => signInWithEmail}>
         <div className="input-field">
           <label htmlFor="login-username">Email:</label>
           <input type="text" id="login-username" required={true} value={email} onChange={(e) => setEmail(e.target.value)}></input>
