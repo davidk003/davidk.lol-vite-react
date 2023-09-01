@@ -12,3 +12,40 @@
 {
     color: var(--contact-info-hover-color);
 }
+
+.tooltip-wrapper
+{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+}
+
+.tooltip
+{
+    /* visibility: hidden; */
+    font-size: 0.75rem;
+    width: fit-content;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    text-align: center;
+    border-radius: 0.25rem;
+    padding: 0.25rem 2rem;
+    margin: 0;
+
+}
+
+.tooltip-triangle
+{
+    /* visibility: hidden; */
+    margin: 0;
+
+
+    
+    width: 0;
+    height: 0;
+    border-width: 0.5rem 0.5rem 0rem 0.5rem;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.85) transparent transparent transparent;
+
+}
