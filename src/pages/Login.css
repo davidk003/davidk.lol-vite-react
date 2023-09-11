@@ -14,7 +14,7 @@ input:focus
 
 .login-page-container button
 {
-    background-color: var(login-button-color);
+    background-color: var(--login-button-color);
     text-align: center;
     display: block;
     border-radius: 4px;
@@ -57,6 +57,21 @@ input:focus
     100% {transform: translate(0.05rem);}
 
     
+}
+
+.login-page-container a
+{
+    text-decoration: underline;
+    font-size: 0.75rem;
+    color: var(--basic-text-color);
+    margin: 1rem;
+    margin-top: 0rem;
+}
+
+.login-page-container a:hover
+{
+    filter: brightness(1.5);
+    cursor: pointer;
 }
 
 

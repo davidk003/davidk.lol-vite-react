@@ -1,18 +1,20 @@
 import "./Login.css";
 import EmoticonHeader from "../components/EmoticonHeader";
+import SignUpCard from "../components/SignUpCard";
 import { supabase } from "../supabaseClient";
-import { useState } from "react";
-import { User } from "@supabase/gotrue-js/dist/module/lib/types";
+import React, { useState } from "react";
 
-export default function Login() {
+export default function Login(): React.ReactElement
+{
+  const [signingUp, setSigningUp] = useState<boolean>(false);
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false)
-  const [currentUser, setCurrentUser] = useState<User | null>(null);
 
   const signInWithEmail = async (event: React.FormEvent<HTMLFormElement>)=> {
     event.preventDefault()
     setLoading(true);
+    // @ts-ignore
     const { data, error } = await supabase.auth.signInWithPassword({
       email: email,
       password: password,
@@ -24,18 +26,14 @@ export default function Login() {
       alert("Login success");
     }
 
-    if(data){
-      setCurrentUser(data.user)
-    }
-
     setLoading(false);
   }
   
 
   return (
     <div className="login-page-container">
-      <a>user: {currentUser ? currentUser.id : "" }</a>
       <EmoticonHeader content="Login" emoticon="🔐"></EmoticonHeader>
+      {signingUp ? <SignUpCard signUpState={signingUp} setSignupState={setSigningUp}/> : <></>}
       <form id="login-form" onSubmit={signInWithEmail}>
         <div className="input-field">
           <label htmlFor="login-username">Email:</label>
@@ -51,6 +49,7 @@ export default function Login() {
         </div>
         <button id="submit-login">{ loading ? "Logging in...." : "Login"} </button>
       </form>
+      {signingUp ? <></>: <a onClick={() => setSigningUp(signingUp ? false : true)}>Sign up?</a>}
     </div>
   );
 }

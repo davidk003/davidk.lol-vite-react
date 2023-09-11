@@ -1,0 +1,44 @@
+.signup-card
+{
+    border-radius:6px;
+    border: 1px solid #1e375a;
+    background-color: #d6e9ff;
+    position: absolute;
+    padding: 3rem;
+
+}
+
+h1
+{
+    color: var(--basic-text-color);
+    display: inline;
+}
+
+input
+{
+    border: none;
+    background-color: inherit;
+    border-bottom: solid 1px;
+}
+
+input:focus
+{
+    filter: brightness(150%);
+    outline: none;
+}
+
+
+.signup-close-button
+{
+    position:  absolute;
+    top:2.4rem;
+    right: 1.5rem;
+    font-size: 1.25rem !important;
+    text-decoration:none !important;
+}
+
+.signup-close-button:hover
+{
+    filter: brightness(85%) !important;
+
+}

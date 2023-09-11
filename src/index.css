@@ -13,6 +13,7 @@
 
   /* CONSTANTS */
   --body-background-color: #E9F1FA;
+  --basic-text-color: #1e375a;
   /* Top Navbar */
   --navbar-color: #aad0fb;
   --navbar-text-color: #1e375a;
@@ -28,7 +29,7 @@
   /* Login form */
   --input-field-hover-color: #9bc0ec;
   --input-field-background-color:#E9F1FA;
-  --login-button-color: antiquewhite;
+  --login-button-color: #aad0fb;
   --login-button-hover-color: white;
   --login-button-padding: 6px 12px;
   /* Projects */
