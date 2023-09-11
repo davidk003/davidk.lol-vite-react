@@ -27,6 +27,7 @@ export default function Login(): React.ReactElement
     }
 
     setLoading(false);
+    window.location.reload();
   }
   
 
