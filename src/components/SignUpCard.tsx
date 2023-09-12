@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import { supabase } from "../supabaseClient";
 
 export default function SignUpCard(prop: {
-  signUpState: boolean;
-  setSignupState: React.Dispatch<React.SetStateAction<boolean>>;
+  signUpCardActive: boolean;
+  setSignUpCardActive: React.Dispatch<React.SetStateAction<boolean>>;
 }): React.ReactElement {
   const [signUpPassword, setSignUpPassword] = useState<string>("");
   const [signUpEmail, setSignUpEmail] = useState<string>("");
@@ -23,7 +23,8 @@ export default function SignUpCard(prop: {
       alert("ERROR CREATING USER\nError message:\n" + error.message);
     }
     else{
-      alert("User creation success!");
+      alert("Check your email for your verification link to log in.");
+      prop.setSignUpCardActive(false);
     }
 
     setSigningUp(false);
@@ -36,7 +37,7 @@ export default function SignUpCard(prop: {
         className="signup-close-button"
         onClick={() => {
           !signingUp
-            ? prop.setSignupState(false)
+            ? prop.setSignUpCardActive(false)
             : alert("Blocked attempt to close signup card during signup.");
         }}
       >
