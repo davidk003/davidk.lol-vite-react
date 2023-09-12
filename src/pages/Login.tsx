@@ -34,7 +34,7 @@ export default function Login(): React.ReactElement
   return (
     <div className="login-page-container">
       <EmoticonHeader content="Login" emoticon="🔐"></EmoticonHeader>
-      {signingUp ? <SignUpCard signUpState={signingUp} setSignupState={setSigningUp}/> : <></>}
+      {signingUp ? <SignUpCard signUpCardActive={signingUp} setSignUpCardActive={setSigningUp}/> : <></>}
       <form id="login-form" onSubmit={signInWithEmail}>
         <div className="input-field">
           <label htmlFor="login-username">Email:</label>
