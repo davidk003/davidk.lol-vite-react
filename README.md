@@ -32,7 +32,7 @@ inspiration: https://www.drone.io/
 
 Stack ideas? (in progress)
 Frontend: React
-Backend: Django
 DB: PostgreSQL
 Build tool: vite
 langs: Typescript/Python
+https://www.freecodecamp.org/news/5-ways-to-fetch-data-react-graphql/

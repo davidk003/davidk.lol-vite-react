@@ -40,7 +40,7 @@ export default function Top_Navbar(prop: {
           {!prop.s ? (
             <NavLink to="/login"> Login</NavLink>
           ) : (
-            <NavLink title={prop.s.user.id} onClick={() => handleSignOut()} to="/">
+            <NavLink title={prop.s.user.id} onClick={() => handleSignOut()} to="/login">
               Sign out
             </NavLink>
           )}
