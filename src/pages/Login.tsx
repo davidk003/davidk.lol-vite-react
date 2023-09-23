@@ -6,14 +6,15 @@ import React, { useState } from "react";
 
 export default function Login(): React.ReactElement
 {
+  
+  const [loggingIn, setLoggingIn] = useState<boolean>(false);
   const [signingUp, setSigningUp] = useState<boolean>(false);
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  const [loading, setLoading] = useState<boolean>(false)
 
   const signInWithEmail = async (event: React.FormEvent<HTMLFormElement>)=> {
     event.preventDefault()
-    setLoading(true);
+    setLoggingIn(true);
     // @ts-ignore
     const { data, error } = await supabase.auth.signInWithPassword({
       email: email,
@@ -26,7 +27,7 @@ export default function Login(): React.ReactElement
       alert("Login success");
     }
 
-    setLoading(false);
+    setLoggingIn(false);
     window.location.reload();
   }
   
@@ -48,7 +49,7 @@ export default function Login(): React.ReactElement
             onChange={(e) => setPassword(e.target.value)}
           ></input>
         </div>
-        <button id="submit-login">{ loading ? "Logging in...." : "Login"} </button>
+        <button id="submit-login">{ loggingIn ? "Logging in...." : "Login"} </button>
       </form>
       {signingUp ? <></>: <a onClick={() => setSigningUp(signingUp ? false : true)}>Sign up?</a>}
     </div>
