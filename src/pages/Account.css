@@ -3,3 +3,9 @@
     color: var(--basic-text-color);
     margin: 1rem;
 }
+
+.account-container p
+{
+    color: var(--basic-text-color);
+    margin: 1rem;
+}

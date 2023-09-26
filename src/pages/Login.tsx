@@ -2,11 +2,12 @@ import "./Login.css";
 import EmoticonHeader from "../components/EmoticonHeader";
 import SignUpCard from "../components/SignUpCard";
 import { supabase } from "../supabaseClient";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function Login(): React.ReactElement
 {
-  
+  useEffect(() =>
+  {console.log("test")},[]);
   const [loggingIn, setLoggingIn] = useState<boolean>(false);
   const [signingUp, setSigningUp] = useState<boolean>(false);
   const [email, setEmail] = useState<string>("");
