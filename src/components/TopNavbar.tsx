@@ -39,7 +39,7 @@ export default function Top_Navbar(): React.ReactElement {
         </li>
         <li>
           {!currentSession ? (
-            <li><NavLink to="/login"> Login</NavLink></li>
+            <NavLink to="/login"> Login</NavLink>
           ) : (
             <NavLink title={currentSession.user.id} onClick={() => handleSignOut()} to="/login">
               Sign out
