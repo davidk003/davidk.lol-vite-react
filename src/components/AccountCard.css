@@ -1,5 +1,6 @@
 .accountcard-container
 {
+    display: inline-block;
     background-color: var(--navbar-color);
     border-style: solid;
     border-radius: 5px;
@@ -7,7 +8,29 @@
     border-color: var(--navbar-color);
 }
 
-.accountcard-immutable-field
+.accountcard-container .accountcard-immutable-field
 {
-    color: white;
+    color: antiquewhite;
+    margin: 1rem;
+}
+
+.accountcard-container .accountcard-mutable-field input
+{
+    margin: 1rem;
+}
+
+.accountcard-container button
+{
+    background-color: #c9e1fd;
+    text-align: center;
+    display: block;
+    border-radius: 4px;
+    padding:var(--login-button-padding);
+    margin: 1rem;
+}
+
+
+.accountcard-container button:hover
+{
+    background-color: var(--login-button-hover-color);
 }

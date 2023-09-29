@@ -1,22 +1,50 @@
 import React from "react";
-import "./AccountCard.css"
+import "./AccountCard.css";
 
-export default function AccountCard(prop:{dataMap: Map<string, string>}):React.ReactElement
-{
-    
-    return(
-        <div className="accountcard-container">
-            <AccountMutableFieldElement field="username" value={prop.dataMap.get("username")}/>
-            <AccountMutableFieldElement field="full_name" value={prop.dataMap.get("full_name")}/>
-            <AccountMutableFieldElement field="website" value={prop.dataMap.get("website")}/>
-            <AccountMutableFieldElement field="avatar_url" value={prop.dataMap.get("avatar_url")}/>
-            <p className="accountcard-immutable-field">{"id: " +  (prop.dataMap.get("id") ? prop.dataMap.get("id") : "empty")}</p>
-            <p className="accountcard-immutable-field">{"last_updated: " +  (prop.dataMap.get("last_updated") ? prop.dataMap.get("last_updated") : "empty")}</p>
-        </div>
-    );
+export default function AccountCard(prop: {
+  dataMap: Map<string, string>, isUpdating: boolean
+}): React.ReactElement {
+  return (
+    <div className="accountcard-container">
+      <MutableFieldElement
+        field="username"
+        value={prop.dataMap.get("username")}
+      />
+      <MutableFieldElement
+        field="full_name"
+        value={prop.dataMap.get("full_name")}
+      />
+      <MutableFieldElement
+        field="website"
+        value={prop.dataMap.get("website")}
+      />
+      <MutableFieldElement
+        field="avatar_url"
+        value={prop.dataMap.get("avatar_url")}
+      />
+      <p className="accountcard-immutable-field">
+        {"id: " + (prop.dataMap.get("id") ? prop.dataMap.get("id") : "empty")}
+      </p>
+      <p className="accountcard-immutable-field">
+        {"last_updated: " +
+          (prop.dataMap.get("last_updated")
+            ? prop.dataMap.get("last_updated")
+            : "empty")}
+      </p>
+      <button>Update Account info</button>
+    </div>
+  );
 }
 
-function AccountMutableFieldElement(prop:{field:string, value:string|undefined}):React.ReactElement
-{
-    return (<p className="accountcard-mutable-field">{prop.field + ": " + (prop.value ? prop.value : "empty")}</p>);
+function MutableFieldElement(prop: {
+  field: string;
+  value: string | undefined;
+}): React.ReactElement {
+  return (
+    <div className="accountcard-mutable-field">
+      <p>{prop.field + ": " + (prop.value ? prop.value : "empty")}</p>
+      <label htmlFor={prop.field}></label>
+      <input type="text" id={prop.field}></input>
+    </div>
+  );
 }

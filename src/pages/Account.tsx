@@ -1,6 +1,6 @@
 import "./Account.css";
 import { supabase } from "../supabaseClient";
-import React, { ReactElement, useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { SessionContext } from "../App";
 import { Session } from "@supabase/supabase-js";
 import AccountCard from "../components/AccountCard";
@@ -9,6 +9,7 @@ import AccountCard from "../components/AccountCard";
 export default function Account(): React.ReactElement {
   const currentSession: Session | null = useContext<Session | null>(SessionContext);
   const [accountMap, setAccountMap] = useState<Map<string, string> | null>(null);
+  const [isUserUpdating,setIsUserUpdating] = useState<boolean>(false);
 
   useEffect(() => {
     const fetchAccount = async () => {
@@ -32,7 +33,7 @@ export default function Account(): React.ReactElement {
     <div className="account-container">
       <h2>Account info:</h2>
       {accountMap ? 
-        (<AccountCard dataMap={accountMap}/>)
+        (<AccountCard dataMap={accountMap} isUpdating={isUserUpdating}/>)
       : (
         <p>No account logged in.</p>
       )}
