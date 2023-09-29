@@ -1,0 +1,13 @@
+.accountcard-container
+{
+    background-color: var(--navbar-color);
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 5px;
+    border-color: var(--navbar-color);
+}
+
+.accountcard-immutable-field
+{
+    color: white;
+}
