@@ -9,6 +9,7 @@ export default function AccountCard(prop: {
       <MutableFieldElement
         field="username"
         value={prop.dataMap.get("username")}
+        isUpdating={this.isUpdating}
       />
       <MutableFieldElement
         field="full_name"
@@ -39,12 +40,12 @@ export default function AccountCard(prop: {
 function MutableFieldElement(prop: {
   field: string;
   value: string | undefined;
+  mutable: boolean
 }): React.ReactElement {
   return (
     <div className="accountcard-mutable-field">
       <p>{prop.field + ": " + (prop.value ? prop.value : "empty")}</p>
-      <label htmlFor={prop.field}></label>
-      <input type="text" id={prop.field}></input>
+      {prop.mutable }
     </div>
   );
 }
