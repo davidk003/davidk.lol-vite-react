@@ -33,7 +33,7 @@ export default function Account(): React.ReactElement {
     <div className="account-container">
       <h2>Account info:</h2>
       {accountMap ? 
-        (<AccountCard dataMap={accountMap} isUpdating={isUserUpdating}/>)
+        (<AccountCard dataMap={accountMap} setIsUpdating={setIsUserUpdating} isUpdating={isUserUpdating}/>)
       : (
         <p>No account logged in.</p>
       )}
