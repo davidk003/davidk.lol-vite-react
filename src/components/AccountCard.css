@@ -14,16 +14,10 @@
     margin: 1rem;
 }
 
-.accountcard-container .accountcard-mutable-field input
-{
-    margin: 1rem;
-}
-
 .accountcard-container button
 {
     background-color: #c9e1fd;
     text-align: center;
-    display: block;
     border-radius: 4px;
     padding:var(--login-button-padding);
     margin: 1rem;
@@ -33,4 +27,23 @@
 .accountcard-container button:hover
 {
     background-color: var(--login-button-hover-color);
+}
+
+.accountcard-container div
+{
+    display: flex;
+}
+
+.accountcard-container span
+{
+    display: inline;
+}
+.accountcard-container .accountcard-mutable-field input
+{
+    margin: 1rem;
+}
+.accountcard-mutable-field label
+{
+    margin: 1rem;
+    color: red;
 }

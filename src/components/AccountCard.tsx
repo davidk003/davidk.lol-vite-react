@@ -17,7 +17,7 @@ export default function AccountCard(prop: {
       <MutableFieldElement mutable={prop.isUpdating}
         field="website"
         value={prop.dataMap.get("website")}
-      />
+      /> 
       <MutableFieldElement mutable={prop.isUpdating}
         field="avatar_url"
         value={prop.dataMap.get("avatar_url")}
@@ -31,7 +31,10 @@ export default function AccountCard(prop: {
             ? prop.dataMap.get("last_updated")
             : "empty")}
       </p>
-      <button onClick={(e)=>{prop.setIsUpdating(!prop.isUpdating)}}>{prop.isUpdating? "Save changes" : "Click to update account info" }</button>
+      <span>
+      <button onClick={()=>{prop.setIsUpdating(!prop.isUpdating)}}>{prop.isUpdating? "Cancel changes" : "Click to update account info" }</button>
+      {prop.isUpdating ? <button onClick={()=>{console.log("Insert function here")}}> Save Changes</button> : <></>}
+      </span>
     </div>
   );
 }
@@ -43,12 +46,13 @@ function MutableFieldElement(prop: {
 }): React.ReactElement {
   return (
     <div className="accountcard-mutable-field">
-      <p>{prop.field + ": " + (prop.value ? prop.value : "empty")}</p>
-      {prop.mutable? (<div className="input-field">
+        {prop.mutable? (<div className="input-field">
         <label htmlFor={prop.field + " field"}>
-          <input id={prop.field + " field"}></input>
+            new {prop.field}: 
         </label>
+        <input id={prop.field + " field"}></input>
       </div>) : <></>}
+      <p>{prop.field + ": " + (prop.value ? prop.value : "empty")}</p>
     </div>
   );
 }
