@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import "./AccountCard.css";
 
 export default function AccountCard(prop: {
-  dataMap: Map<string, string>;
-  updateAccountCallback: (inputAccount: Map<string,string>) => Promise<void>;
+  dataMap: Map<string,string|undefined>;
+  updateAccountCallback: (inputAccount: Map<string,string|undefined>) => Promise<void>;
   isUpdating: boolean;
   setIsUpdating: React.Dispatch<React.SetStateAction<boolean>>;
 }): React.ReactElement {
-  const [updateInfo, setUpdateInfo] = useState<Map<string,string>>(
+  const [updateInfo, setUpdateInfo] = useState<Map<string,string|undefined>>(
     new Map( [["username", ""], ["full_name", ""], ["website", ""], ["avatar_url", ""]]));
 
   return (
@@ -80,8 +80,8 @@ function MutableFieldElement(prop: {
   field: string;
   value: string | undefined;
   mutable: boolean;
-  info: Map<string, string>;
-  setInfo: React.Dispatch<React.SetStateAction<Map<string, string>>>;
+  info: Map<string,string|undefined>;
+  setInfo: React.Dispatch<React.SetStateAction<Map<string,string|undefined>>>;
 }): React.ReactElement {
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {

@@ -28,7 +28,7 @@ export default function Account(): React.ReactElement {
     fetchAccount();
   }, []);
 
-  const updateAccount = async (inputAccount:Map<string,string>) => 
+  const updateAccount = async (inputAccount:Map<string,string|undefined>) => 
   {
     for(let [key, value] of inputAccount)
     {
@@ -36,7 +36,12 @@ export default function Account(): React.ReactElement {
       {
         inputAccount.delete(key);
       }
+      else if (value?.toLowerCase() === "[null]")
+      {
+        inputAccount.set(key, undefined);
+      }
     }
+    
     const { error } = await supabase
       .from("profiles")
       .update(Object.fromEntries(inputAccount))
