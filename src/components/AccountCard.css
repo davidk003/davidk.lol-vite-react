@@ -8,10 +8,9 @@
     border-color: var(--navbar-color);
 }
 
-.accountcard-container .accountcard-immutable-field
+.accountcard-container  p
 {
-    color: antiquewhite;
-    margin: 1rem;
+    color: var(--basic-text-color);
 }
 
 .accountcard-container button
@@ -27,6 +26,7 @@
 .accountcard-container button:hover
 {
     background-color: var(--login-button-hover-color);
+    
 }
 
 .accountcard-container div
@@ -38,12 +38,24 @@
 {
     display: inline;
 }
-.accountcard-container .accountcard-mutable-field input
+
+.accountcard-mutable-field input
 {
-    margin: 1rem;
+    padding: 0.25rem;
+    margin-bottom: 1rem;
+    margin-left: 0rem;
 }
+
 .accountcard-mutable-field label
 {
     margin: 1rem;
+    color: #E9F1FA;
+    text-shadow: 1px 1px 10px var(--basic-text-color);
+}
+
+.accountcard-mutable-field .empty-value::after
+{
+    content: "EMPTY";
     color: red;
+    text-decoration: underline;
 }

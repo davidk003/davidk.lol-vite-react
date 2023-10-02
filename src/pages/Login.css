@@ -1,4 +1,5 @@
-input{
+.login-page-container input
+{
     display: block;
     background-color: var(--input-field-background-color);
     border-style: groove;
