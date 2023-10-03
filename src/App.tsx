@@ -17,13 +17,14 @@ function App() {
   const [session, setSession] = useState<Session | null>(null);
 
   useEffect(() => {
+    console.log("thingy");
     supabase.auth.getSession().then(({ data: { session } }) => {
       setSession(session);
     });
     supabase.auth.onAuthStateChange((_event, session) => {
       setSession(session);
     });
-  });
+  }, []);
 
   return (
     <SessionContext.Provider value={session}>
