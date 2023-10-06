@@ -1,4 +1,4 @@
-.header-emoticon:hover {
+.project-page-container .header-emoticon:hover {
   animation: project-animation 1s;
   animation-iteration-count: infinite;
 }
