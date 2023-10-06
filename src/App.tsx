@@ -10,6 +10,7 @@ import { createContext, useEffect, useState } from "react";
 import { supabase } from "../src/supabaseClient";
 import { Session } from "@supabase/supabase-js";
 import Account from "./pages/Account";
+import DeveloperDashboard from "./pages/DeveloperDashboard";
 
 export const SessionContext = createContext<Session | null>(null);
 
@@ -38,6 +39,7 @@ function App() {
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/projects" element={<Projects></Projects>}></Route>
           <Route path="/account" element={<Account></Account>}></Route>
+          <Route path="/developer-dashboard" element={<DeveloperDashboard></DeveloperDashboard>}></Route>
         </Routes>
       </div>
     </SessionContext.Provider>
