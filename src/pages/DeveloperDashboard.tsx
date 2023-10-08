@@ -23,11 +23,14 @@ export default function DeveloperDashboard(): React.ReactElement
     //     let {data, error} = await supabase.from("profiles")
     // }
 
-    return(<div className="developer-dashboard-container">
+    return(
+        !currentSession ? <p> Not logged in.</p>: 
+        <div className="developer-dashboard-container">
         <EmoticonHeader content="Developer Dashboard" emoticon="🔧"></EmoticonHeader>
         <h2>Inbox</h2>
         {newMessageCount ? <p>{newMessageCount} new messages.</p> : 
         <p>Fetching messages{loadingText}</p>}
         <button onClick={()=>setNewMessageCount(currentSession?.expires_at ? currentSession.expires_at: null)}>stop</button>
-    </div>);
+    </div>
+);
 }
