@@ -11,6 +11,7 @@ import { supabase } from "../src/supabaseClient";
 import { Session } from "@supabase/supabase-js";
 import Account from "./pages/Account";
 import DeveloperDashboard from "./pages/DeveloperDashboard";
+import TicTacToe from "./pages/TicTacToe";
 
 export const SessionContext = createContext<Session | null>(null);
 
@@ -40,6 +41,7 @@ function App() {
           <Route path="/projects" element={<Projects></Projects>}></Route>
           <Route path="/account" element={<Account></Account>}></Route>
           <Route path="/developer-dashboard" element={<DeveloperDashboard></DeveloperDashboard>}></Route>
+          <Route path="/tictactoe" element={<TicTacToe></TicTacToe>}></Route>
         </Routes>
       </div>
     </SessionContext.Provider>
