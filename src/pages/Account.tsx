@@ -26,7 +26,7 @@ export default function Account(): React.ReactElement {
   };
   useEffect(() => {
     fetchAccount();
-  }, []);
+  }, [currentSession]);
 
   const updateAccount = async (inputAccount:Map<string,string|undefined>) => 
   {
