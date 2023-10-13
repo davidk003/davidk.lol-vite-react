@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import "./TopNavbar.css";
 import { NavLink } from "react-router-dom";
 import { supabase } from "../supabaseClient";
@@ -8,7 +8,6 @@ import NavbarProfile from "./NavBarProfile";
 
 export default function Top_Navbar(): React.ReactElement {
   const currentSession: (Session | null) = useContext<Session | null>(SessionContext);
-  const [showProfile, setShowProfile] = useState<boolean>(false);
 
   const handleSignOut = async () => {
     const { error } = await supabase.auth.signOut();
@@ -51,7 +50,7 @@ export default function Top_Navbar(): React.ReactElement {
         {currentSession ? <li><NavLink to="/account">Account</NavLink></li> : <></>
         }
 
-        {showProfile ? <NavbarProfile></NavbarProfile> : <li> <a onClick={()=>setShowProfile(!showProfile)}>Profile</a></li> }
+        <li> <NavbarProfile></NavbarProfile> </li>
       </ul>
     </nav>
   );

@@ -1,0 +1,24 @@
+.navbar-profile-container ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items:stretch;
+}
+
+.navbar-profile li {
+    display: block;
+}
+
+.navbar-profile-dropdown-list
+{
+    list-style: none;
+    margin: 10rem;
+}
+
+.navbar-profile-dropdown-list li
+{
+    margin: 1rem;
+}
