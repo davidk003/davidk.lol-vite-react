@@ -36,7 +36,7 @@ export default function Top_Navbar(): React.ReactElement {
           <NavLink to="/aboutme"> About Me </NavLink>
         </li>
         <li>
-          <NavLink to="/fun"> Fun </NavLink>
+          <NavLink to="/tictactoe"> Fun </NavLink>
         </li>
         <li>
           {!currentSession ? (
