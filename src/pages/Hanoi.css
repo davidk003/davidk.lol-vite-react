@@ -1,0 +1,27 @@
+.hanoi-container .rods
+{
+    background-color: gray;
+
+    margin: 1rem;
+    margin-bottom: 0rem;
+    padding: 1rem 0.25rem;
+}
+
+.hanoi-container .goal-rod
+{
+    background-color: gold;
+    margin: 1rem;
+    margin-bottom: 0rem;
+    padding: 1rem 0.25rem;
+}
+
+.hanoi-container h2, h3
+{
+    margin:1rem;
+}
+
+.hanoi-container h3
+{
+    margin:1rem;
+    margin-bottom: 0;
+}
