@@ -1,8 +1,58 @@
 import React, { useState } from "react";
 import "./TicTacToe.css"
 
+
+interface PromptInput
+{
+  rows: number;
+  cols: number;
+  win_condition: number;
+}
+
 let turn: number = 0;
 const board_history: string[][] = [];
+const board_min: number = 1;
+const board_max: number = 100;
+
+
+
+
+
+export default function TicTacToe(): React.ReactElement
+{
+  const [submittedPrompt, setSubmittedPrompt] = useState<PromptInput | null>(null);
+  function submitHandler(e):void
+  {
+    setSubmittedPrompt({rows: 3, cols: 3, win_condition: 3});
+    console.log(submittedPrompt);
+  }
+  return submittedPrompt ? <Board rows={3} cols={3} win_condition={3}></Board> : <PromptTicTacToe></PromptTicTacToe>;
+}
+
+function PromptTicTacToe():React.ReactElement
+{
+  const [inputRows, setInputRows ] = useState<number>(board_min);
+  const [inputCols, setInputCols ] = useState<number>(board_min);
+  const [inputWinCondition, setInputWinCondition] = useState<number>(board_min);
+  function minBetweenSliders(): number
+  {
+    return inputRows < inputCols ? inputRows : inputCols; //Return the minimum of the two
+  }
+    
+  return <div className="prompt-tictactoe-container">
+    <form onSubmit={ (e) => {e.preventDefault();submit;console.log("rows: " + inputRows + "\ncols: " + inputCols + "\nwincond: " + inputWinCondition);}}>
+      <label>Rows: {inputRows}</label>
+      <input id="tictactoe-rows" defaultValue={board_min} type="range" min={board_min} max={board_max} onChange={(e) =>  {setInputRows(e.target.valueAsNumber)}}></input>
+      <label>Columns: {inputCols}</label>
+      <input id="tictactoe-cols" defaultValue={board_min} type="range" min={board_min} max={board_max} onChange={(e) =>  {setInputCols(e.target.valueAsNumber)}}></input>
+      <label>Win condition: {inputWinCondition}</label>
+      <input type="range" defaultValue={board_min} min={board_min} max={minBetweenSliders()} onChange={(e) =>  {setInputWinCondition(e.target.valueAsNumber)}}></input>
+      <input type="submit"></input>
+    </form>
+  </div>
+
+}
+
 
 function Square(prop: { value: string, onSquareClick: (index: number) => void}, index:number): React.ReactElement {
   return (
@@ -10,13 +60,18 @@ function Square(prop: { value: string, onSquareClick: (index: number) => void}, 
       {prop.value}
     </button>
   );
-
-
 }
-export default function Board(): JSX.Element{
-  const board_rows: number = 10;
-  const board_cols: number = 10;
-  const to_win: number = 5;
+
+function Board(prop: {rows: number, cols: number, win_condition: number}): JSX.Element{
+
+  if (prop.rows <= 0 || prop.cols <= 0 || prop.win_condition <= 0 || prop.win_condition > prop.rows || prop.win_condition > prop.cols)
+  {
+    alert("Rows, columns or win condition input invalid.");
+    return <></>
+  }
+  const board_rows: number = prop.rows;
+  const board_cols: number = prop.cols;
+  const to_win: number = prop.win_condition;
 
   const  [currentVals, setVals] = useState<string[]>(Array(board_rows*board_cols).fill(""));
 
